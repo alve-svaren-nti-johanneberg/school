@@ -32,3 +32,8 @@ require "./absolute"
 fail unless absolute(-33) == 33
 fail unless absolute(4) == 4
 fail unless absolute(-14.3) == 14.3
+
+require "./is_negative"
+fail unless is_negative(55) == false
+fail unless is_negative(-4) == true
+fail unless is_negative(0) == false

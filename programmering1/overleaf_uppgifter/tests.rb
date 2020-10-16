@@ -66,3 +66,7 @@ require "./smallest_of_three"
 fail unless smallest_of_three(-25, 7, 2) == -25
 fail unless smallest_of_three(50, 4, -100) == -100
 fail unless smallest_of_three(100, 57, 72) == 57
+
+require "./sum_to"
+fail unless sum_to(6) == 21
+fail unless sum_to(874) == 382375

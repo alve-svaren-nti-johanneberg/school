@@ -61,3 +61,8 @@ fail unless is_divisible_by(104224, 3257) == true
 require "./smallest_of_two"
 fail unless smallest_of_two(-25, 5) == -25
 fail unless smallest_of_two(5, 4) == 4
+
+require "./smallest_of_three"
+fail unless smallest_of_three(-25, 7, 2) == -25
+fail unless smallest_of_three(50, 4, -100) == -100
+fail unless smallest_of_three(100, 57, 72) == 57

@@ -1,4 +1,4 @@
-require "./is_even.rb"
+require_relative "./is_even.rb"
 
 def sum_even(num)
     sum = 0

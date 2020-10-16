@@ -13,3 +13,8 @@ fail unless square(-83477) == 6968409529
 require "./cube"
 fail unless cube(2) == 8
 fail unless cube(243) == 14348907
+
+require "./add"
+fail unless add(2,6) == 8
+fail unless add(-3443,234234234) == 234230791
+fail unless add(-3443,-555) == -3998

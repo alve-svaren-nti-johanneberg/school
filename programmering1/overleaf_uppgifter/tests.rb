@@ -47,3 +47,8 @@ require "./is_even"
 fail unless is_even(55) == false
 fail unless is_even(-54056540) == true
 fail unless is_even(0) == true
+
+require "./is_odd"
+fail unless is_odd(55) == true
+fail unless is_odd(-54056540) == false
+fail unless is_odd(0) == false

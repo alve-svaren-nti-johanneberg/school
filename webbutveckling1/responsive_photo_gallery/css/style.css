@@ -4,6 +4,13 @@ main {
     gap: 6px;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 img {
     height: 250px;
     width: 100%;
@@ -15,7 +22,6 @@ img {
     transition-timing-function: ease-in-out;
     transition-property: filter border-radius box-shadow transform;
     z-index: 1;
-
 }
 
 img:hover {
@@ -27,5 +33,5 @@ img:hover {
 }
 
 body {
-    background-color: gray;
+    background-color: whitesmoke;
 }

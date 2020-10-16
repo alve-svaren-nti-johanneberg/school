@@ -27,3 +27,8 @@ fail unless subtract(-3443,-555) == -2888
 require "./hypotenuse"
 fail unless hypotenuse(3,4) == 5.0
 fail unless hypotenuse(68,76) == 101.9803902718557
+
+require "./absolute"
+fail unless absolute(-33) == 33
+fail unless absolute(4) == 4
+fail unless absolute(-14.3) == 14.3

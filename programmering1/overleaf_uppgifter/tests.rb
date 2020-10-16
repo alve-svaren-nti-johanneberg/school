@@ -23,3 +23,7 @@ require "./subtract"
 fail unless subtract(2,6) == -4
 fail unless subtract(-3443,234234234) == -234237677
 fail unless subtract(-3443,-555) == -2888
+
+require "./hypotenuse"
+fail unless hypotenuse(3,4) == 5.0
+fail unless hypotenuse(68,76) == 101.9803902718557

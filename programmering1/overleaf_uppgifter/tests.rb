@@ -74,3 +74,5 @@ fail unless sum_to(874) == 382375
 require "./sum_even"
 fail unless sum_even(6) == 12
 fail unless sum_even(10) == 30
+
+puts "All tests passed!"

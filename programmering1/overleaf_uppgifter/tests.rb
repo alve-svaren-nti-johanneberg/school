@@ -18,3 +18,8 @@ require "./add"
 fail unless add(2,6) == 8
 fail unless add(-3443,234234234) == 234230791
 fail unless add(-3443,-555) == -3998
+
+require "./subtract"
+fail unless subtract(2,6) == -4
+fail unless subtract(-3443,234234234) == -234237677
+fail unless subtract(-3443,-555) == -2888

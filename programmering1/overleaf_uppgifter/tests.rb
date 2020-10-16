@@ -52,3 +52,8 @@ require "./is_odd"
 fail unless is_odd(55) == true
 fail unless is_odd(-54056540) == false
 fail unless is_odd(0) == false
+
+require "./is_divisible_by"
+fail unless is_divisible_by(-25, 5) == true
+fail unless is_divisible_by(-18, 4) == false
+fail unless is_divisible_by(104224, 3257) == true

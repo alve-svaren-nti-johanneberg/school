@@ -9,3 +9,7 @@ fail unless previous_number(-88) == -89
 require "./square"
 fail unless square(3) == 9
 fail unless square(-83477) == 6968409529
+
+require "./cube"
+fail unless cube(2) == 8
+fail unless cube(243) == 14348907

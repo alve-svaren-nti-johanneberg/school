@@ -70,3 +70,7 @@ fail unless smallest_of_three(100, 57, 72) == 57
 require "./sum_to"
 fail unless sum_to(6) == 21
 fail unless sum_to(874) == 382375
+
+require "./sum_even"
+fail unless sum_even(6) == 12
+fail unless sum_even(10) == 30

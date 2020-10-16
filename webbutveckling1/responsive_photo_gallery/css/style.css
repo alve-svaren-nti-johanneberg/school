@@ -1,0 +1,31 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 6px;
+}
+
+img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    transition-duration: 200ms;
+    cursor: pointer;
+    border-radius: 4px;
+    filter: none;
+    transition-timing-function: ease-in-out;
+    transition-property: filter border-radius box-shadow transform;
+    z-index: 1;
+
+}
+
+img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    box-shadow: 4px 4px 25px #000a;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+body {
+    background-color: gray;
+}

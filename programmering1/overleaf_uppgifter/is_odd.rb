@@ -1,3 +1,3 @@
 def is_odd(num)
-    return num / 2 != num.to_f / 2
+    return num % 2 != 0
 end

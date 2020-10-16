@@ -37,3 +37,8 @@ require "./is_negative"
 fail unless is_negative(55) == false
 fail unless is_negative(-4) == true
 fail unless is_negative(0) == false
+
+require "./is_positive"
+fail unless is_positive(55) == true
+fail unless is_positive(-4) == false
+fail unless is_positive(0) == true

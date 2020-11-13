@@ -81,4 +81,8 @@ fail unless first_character("hej") == "h"
 require "./last_character"
 fail unless last_character("hej") == "j"
 
+require "./is_empty"
+fail unless is_empty("")
+fail unless not is_empty("not empty")
+
 puts "All tests passed!"

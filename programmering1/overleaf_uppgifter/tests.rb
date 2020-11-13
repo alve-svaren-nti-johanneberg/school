@@ -93,4 +93,10 @@ require "./nth_character"
 fail unless nth_character("hej", 1) == "h"
 fail unless nth_character("hej", 0) == "j"
 
+require "./palindrom"
+fail unless palindrom("natur rutan")
+fail unless palindrom("anna")
+fail unless palindrom("ajabaja")
+fail unless not palindrom("ni talar bra latin")
+
 puts "All tests passed!"

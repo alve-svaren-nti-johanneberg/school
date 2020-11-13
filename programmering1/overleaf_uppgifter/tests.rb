@@ -75,4 +75,7 @@ require "./sum_even"
 fail unless sum_even(6) == 12
 fail unless sum_even(10) == 30
 
+require "./first_character"
+fail unless first_character("hej") == "h"
+
 puts "All tests passed!"

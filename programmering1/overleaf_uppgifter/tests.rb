@@ -85,4 +85,8 @@ require "./is_empty"
 fail unless is_empty("")
 fail unless not is_empty("not empty")
 
+require "./length_of_string"
+fail unless length_of_string("hej") == 3
+fail unless length_of_string("") == 0
+
 puts "All tests passed!"

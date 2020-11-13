@@ -78,4 +78,7 @@ fail unless sum_even(10) == 30
 require "./first_character"
 fail unless first_character("hej") == "h"
 
+require "./last_character"
+fail unless last_character("hej") == "j"
+
 puts "All tests passed!"

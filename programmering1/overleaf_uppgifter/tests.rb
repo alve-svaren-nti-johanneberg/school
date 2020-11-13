@@ -89,4 +89,8 @@ require "./length_of_string"
 fail unless length_of_string("hej") == 3
 fail unless length_of_string("") == 0
 
+require "./nth_character"
+fail unless nth_character("hej", 1) == "h"
+fail unless nth_character("hej", 0) == "j"
+
 puts "All tests passed!"

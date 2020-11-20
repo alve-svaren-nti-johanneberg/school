@@ -75,4 +75,9 @@ require_relative "./sum_even"
 fail unless sum_even(6) == 12
 fail unless sum_even(10) == 30
 
+require_relative "./add_exclamation"
+gammal_text = "hello"
+fail unless add_exclamation(gammal_text) == "hello!"
+fail unless gammal_text == "hello"
+
 puts "All tests passed!"

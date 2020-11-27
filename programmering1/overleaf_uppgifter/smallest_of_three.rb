@@ -1,4 +1,4 @@
-require "./smallest_of_two.rb"
+require_relative "./smallest_of_two.rb"
 
 def smallest_of_three(num1, num2, num3)
     small = smallest_of_two(num1, num2)

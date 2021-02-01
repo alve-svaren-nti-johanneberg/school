@@ -104,4 +104,8 @@ fail unless palindrom("anna")
 fail unless palindrom("ajabaja")
 fail unless not palindrom("ni talar bra latin")
 
+require_relative "./average_number.rb"
+fail unless average_number([1,2,3]) == 2
+fail unless average_number([13, 10, 9, 111, 319, 1, -99]) == 52
+
 puts "All tests passed!"

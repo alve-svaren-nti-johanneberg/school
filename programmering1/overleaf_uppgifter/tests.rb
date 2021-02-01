@@ -108,4 +108,7 @@ require_relative "./average_number.rb"
 fail unless average_number([1,2,3]) == 2
 fail unless average_number([13, 10, 9, 111, 319, 1, -99]) == 52
 
+require_relative "./approximate_the_golden_ratio.rb"
+fail unless absolute(approximate_the_golden_ratio(1000) - 1.618033988749894)
+
 puts "All tests passed!"

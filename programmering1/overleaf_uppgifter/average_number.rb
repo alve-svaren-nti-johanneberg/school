@@ -4,5 +4,5 @@ def average_number(numbers)
         sum += number
     end
 
-    return sum/numbers.length()
+    return sum.to_f/numbers.length()
 end

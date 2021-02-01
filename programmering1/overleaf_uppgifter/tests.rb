@@ -80,25 +80,25 @@ gammal_text = "hello"
 fail unless add_exclamation(gammal_text) == "hello!"
 fail unless gammal_text == "hello"
 
-require "./first_character"
+require_relative "./first_character"
 fail unless first_character("hej") == "h"
 
-require "./last_character"
+require_relative "./last_character"
 fail unless last_character("hej") == "j"
 
-require "./is_empty"
+require_relative "./is_empty"
 fail unless is_empty("")
 fail unless not is_empty("not empty")
 
-require "./length_of_string"
+require_relative "./length_of_string"
 fail unless length_of_string("hej") == 3
 fail unless length_of_string("") == 0
 
-require "./nth_character"
+require_relative "./nth_character"
 fail unless nth_character("hej", 1) == "h"
 fail unless nth_character("hej", 0) == "j"
 
-require "./palindrom"
+require_relative "./palindrom"
 fail unless palindrom("natur rutan")
 fail unless palindrom("anna")
 fail unless palindrom("ajabaja")

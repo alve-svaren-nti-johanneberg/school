@@ -15,18 +15,18 @@ fail unless cube(2) == 8
 fail unless cube(243) == 14348907
 
 require_relative "./add"
-fail unless add(2,6) == 8
-fail unless add(-3443,234234234) == 234230791
-fail unless add(-3443,-555) == -3998
+fail unless add(2, 6) == 8
+fail unless add(-3443, 234234234) == 234230791
+fail unless add(-3443, -555) == -3998
 
 require_relative "./subtract"
-fail unless subtract(2,6) == -4
-fail unless subtract(-3443,234234234) == -234237677
-fail unless subtract(-3443,-555) == -2888
+fail unless subtract(2, 6) == -4
+fail unless subtract(-3443, 234234234) == -234237677
+fail unless subtract(-3443, -555) == -2888
 
 require_relative "./hypotenuse"
-fail unless hypotenuse(3,4) == 5.0
-fail unless hypotenuse(68,76) == 101.9803902718557
+fail unless hypotenuse(3, 4) == 5.0
+fail unless hypotenuse(68, 76) == 101.9803902718557
 
 require_relative "./absolute"
 fail unless absolute(-33) == 33
@@ -88,7 +88,7 @@ fail unless last_character("hej") == "j"
 
 require_relative "./is_empty"
 fail unless is_empty("")
-fail unless not is_empty("not empty")
+fail if is_empty("not empty")
 
 require_relative "./length_of_string"
 fail unless length_of_string("hej") == 3
@@ -102,13 +102,72 @@ require_relative "./palindrom"
 fail unless palindrom("natur rutan")
 fail unless palindrom("anna")
 fail unless palindrom("ajabaja")
-fail unless not palindrom("ni talar bra latin")
+fail if palindrom("ni talar bra latin")
 
 require_relative "./average_number.rb"
-fail unless average_number([1,2,3]) == 2
+fail unless average_number([1, 2, 3]) == 2
 fail unless average_number([13, 10, 9, 111, 319, 1, -99]) == 52
 
 require_relative "./approximate_the_golden_ratio.rb"
 fail unless absolute(approximate_the_golden_ratio(1000) - 1.618033988749894)
+
+require_relative "./append.rb"
+fail unless append([1, 2, 3], 4) == [1, 2, 3, 4]
+
+require_relative "./average.rb"
+fail unless average([1, 2, 3]) == 2
+begin
+  average([1, 2, 3, "hello"])
+rescue TypeError
+else
+  fail
+end
+
+require_relative "./concat.rb"
+fail unless concat([1, 2, 3, "hello"], [nil, 0.1]) == [1, 2, 3, "hello", nil, 0.1]
+
+require_relative "./contains.rb"
+fail unless contains([1, 2, 3, "h"], "h")
+fail if contains([], "h")
+
+require_relative "./count.rb"
+fail unless count([1, 2, 3, 3, 3, 3], 3) == 4
+
+require_relative "./exclude.rb"
+fail unless exclude([1, 1, 1, 1, 1, 1, 1, 1, 1, 2], 1) == [2]
+
+require_relative "./filter.rb"
+fail unless filter([111, 2, 3, 1, 1], 1) == [1, 1]
+
+require_relative "./max.rb"
+fail unless max([2, 1, 3]) == 3
+
+require_relative "./min.rb"
+fail unless min([2, 1, 3]) == 1
+
+require_relative "./prepend.rb"
+fail unless prepend([1, 2, 3], "h") == ["h", 1, 2, 3]
+
+require_relative "./split_char.rb"
+fail unless split_char("hej hallå där", " ") == ["hej", "hallå", "där"]
+fail unless split_char("1;2;3;4", ";") == ["1", "2", "3", "4"]
+begin
+  split_char([1, 2, 3], "hello")
+rescue TypeError
+else
+  fail
+end
+begin
+  split_char("hello", "123")
+rescue TypeError
+else
+  fail
+end
+
+require_relative "./sum.rb"
+fail unless sum([2, 1]) == 3
+
+require_relative "./unique.rb"
+fail unless unique([1, 1, 1, 1, 1, 1, 2, 3]) == [1, 2, 3]
 
 puts "All tests passed!"

@@ -104,17 +104,17 @@ fail unless palindrom("anna")
 fail unless palindrom("ajabaja")
 fail if palindrom("ni talar bra latin")
 
-require_relative "./average_number.rb"
+require_relative "./average_number"
 fail unless average_number([1, 2, 3]) == 2
 fail unless average_number([13, 10, 9, 111, 319, 1, -99]) == 52
 
-require_relative "./approximate_the_golden_ratio.rb"
+require_relative "./approximate_the_golden_ratio"
 fail unless absolute(approximate_the_golden_ratio(1000) - 1.618033988749894)
 
-require_relative "./append.rb"
+require_relative "./append"
 fail unless append([1, 2, 3], 4) == [1, 2, 3, 4]
 
-require_relative "./average.rb"
+require_relative "./average"
 fail unless average([1, 2, 3]) == 2
 begin
   average([1, 2, 3, "hello"])
@@ -123,32 +123,32 @@ else
   fail
 end
 
-require_relative "./concat.rb"
+require_relative "./concat"
 fail unless concat([1, 2, 3, "hello"], [nil, 0.1]) == [1, 2, 3, "hello", nil, 0.1]
 
-require_relative "./contains.rb"
+require_relative "./contains"
 fail unless contains([1, 2, 3, "h"], "h")
 fail if contains([], "h")
 
-require_relative "./count.rb"
+require_relative "./count"
 fail unless count([1, 2, 3, 3, 3, 3], 3) == 4
 
-require_relative "./exclude.rb"
+require_relative "./exclude"
 fail unless exclude([1, 1, 1, 1, 1, 1, 1, 1, 1, 2], 1) == [2]
 
-require_relative "./filter.rb"
+require_relative "./filter"
 fail unless filter([111, 2, 3, 1, 1], 1) == [1, 1]
 
-require_relative "./max.rb"
+require_relative "./max"
 fail unless max([2, 1, 3]) == 3
 
-require_relative "./min.rb"
+require_relative "./min"
 fail unless min([2, 1, 3]) == 1
 
-require_relative "./prepend.rb"
+require_relative "./prepend"
 fail unless prepend([1, 2, 3], "h") == ["h", 1, 2, 3]
 
-require_relative "./split_char.rb"
+require_relative "./split_char"
 fail unless split_char("hej hallå där", " ") == ["hej", "hallå", "där"]
 fail unless split_char("1;2;3;4", ";") == ["1", "2", "3", "4"]
 begin
@@ -164,10 +164,10 @@ else
   fail
 end
 
-require_relative "./sum.rb"
+require_relative "./sum"
 fail unless sum([2, 1]) == 3
 
-require_relative "./unique.rb"
+require_relative "./unique"
 fail unless unique([1, 1, 1, 1, 1, 1, 2, 3]) == [1, 2, 3]
 
 puts "All tests passed!"

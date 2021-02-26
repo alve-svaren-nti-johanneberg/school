@@ -30,15 +30,6 @@ int main(int argc, char const *argv[])
 {
     // int randomized_list[] = {};
     FILE* file = fopen("randomized_list.txt", "r");
-    fseek(file, 0, SEEK_END);
-    long fsize = ftell(file);
-    rewind(file);
-    
-    char *string = malloc(fsize + 1);
-    fread(string, 1, fsize, file);
-    // printf(string);
-
-    rewind(file);
 
     char c;
     int count = 0;
@@ -47,7 +38,10 @@ int main(int argc, char const *argv[])
             count++;
         }
     }
-
+    long fsize = ftell(file);
+    char *string = malloc(fsize + 1);
+    rewind(file);
+    fread(string, 1, fsize, file);
     fclose(file);
 
     int randomized_list[count];
@@ -60,7 +54,7 @@ int main(int argc, char const *argv[])
     {
         if (string[i] == '\n') {
             sscanf(tmp, "%d", &(randomized_list[current_num]));
-            current_num += 1;
+            current_num++;
             string_i = 0;
             memset(tmp, 0, 20);
         }

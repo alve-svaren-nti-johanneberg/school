@@ -21,4 +21,4 @@ end
 
 start = Time.now
 bubble_sort(get_randomized_list())
-p "Sorteringen tog #{Time.now-start} sekunder"
+puts "Sorteringen tog #{Time.now-start} sekunder"

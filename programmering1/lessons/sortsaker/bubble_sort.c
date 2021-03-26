@@ -26,6 +26,21 @@ void bubble_sort(int array[], int size) {
     }
 }
 
+void insertion_sort(int array[], int size) {
+    int new_array[size];
+    int items_left = size;
+    int skipped_indexes[size];
+    int skipped_index = 0;
+    int smallest;
+    int new_index = 0;
+    while (items_left > 0) {
+        smallest = __INT_MAX__;
+        for (int i = 0; i < size; i++) {
+            
+        }
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     // int randomized_list[] = {};
@@ -61,6 +76,7 @@ int main(int argc, char const *argv[])
         tmp[string_i] = string[i];
         string_i++;
     }
+    free(string);
     
 
     int start = millis();

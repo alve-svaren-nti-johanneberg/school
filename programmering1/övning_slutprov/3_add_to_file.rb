@@ -15,7 +15,7 @@ def add_to_file(file_name, string)
         raise TypeError.new "Argument string must be a String"
     end
 
-    if !File.exist?(file_name)
+    if !File.file?(file_name)
         puts "Filen #{file_name} finns inte"
         puts "Ange ett nytt filnamn:"
         print "> "
@@ -27,6 +27,7 @@ def add_to_file(file_name, string)
     file.rewind
     puts "Filen #{file_name} innehåller nu:"
     puts file.read
+    file.close
 
     return
 end
